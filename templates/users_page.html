@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Пользователи
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Страница с пользователями</h1>
+
+    {% for el in users %}
+    <div class="alert alert-info">
+        <div style="display:flex; align-items:center; justify-content: space-between;">
+            <div>
+                <h2>{{ el.last_name }}</h2>
+                <h5> {{ el.first_name }} ({{ el.patronymic }})</h5>
+                <h7>Дата рождения: {{ el.birthday }}</h7>
+            </div>
+            <a href="users_page_detail/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

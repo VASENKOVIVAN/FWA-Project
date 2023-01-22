@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление пользователя
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Страница создания пользователя</h1>
+
+    <div class="alert alert-info">
+        <form action="/create_user" method="POST">
+            <div class="form-group">
+                <label for="lastname">Фамsssилия</label>
+                <input type="text" class="form-control" name="lastname" placeholder="Введите фамилию">
+            </div>
+            <div class="form-group">
+                <label for="firstname">Имя</label>
+                <input type="text" class="form-control" name="firstname" placeholder="Введите имя">
+            </div>
+            <div class="form-group">
+                <label for="patronymic">Отчество</label>
+                <input type="text" class="form-control" name="patronymic" placeholder="Введите отчество">
+            </div>
+            <div class="form-group">
+                <label for="birthday">Дата рождения</label>
+                <input type="date" class="form-control" name="birthday">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
