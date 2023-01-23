@@ -8,6 +8,7 @@
 <div class="container">
     <h1>Страница с пользователями</h1>
 
+    {% if users|length > 0 %}
     {% for el in users %}
     <div class="alert alert-info">
         <div style="display:flex; align-items:center; justify-content: space-between;">
@@ -20,5 +21,10 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <h2>Список пустой</h2>
+    {% endif %}
+
+
 </div>
 {% endblock %}
