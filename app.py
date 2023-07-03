@@ -16,6 +16,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route("/auth")
+def auth():
+    return render_template('auth.html')
+
+
 @app.route("/users_page")
 def users_page():
     return render_template('users_page.html', users=api_v1_users())
